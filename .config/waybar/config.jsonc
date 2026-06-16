@@ -1,0 +1,118 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "spacing": 0,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+
+    "modules-left": [
+        "custom/skull",
+        "hyprland/workspaces",
+        "custom/seal",
+        "tray"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "battery",
+        "custom/power"
+    ],
+
+    // Workspaces 
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "Ⅰ",
+            "2": "Ⅱ",
+            "3": "Ⅲ",
+            "4": "Ⅳ",
+            "5": "Ⅴ",
+            "6": "ⅤⅠ",
+            "7": "ⅤⅡ",
+            "8": "ⅤⅢ",
+            "9": "ⅠⅩ",
+            "10": "Ⅹ",
+            "urgent": "󰂪",
+            "default": "󰈔"
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+
+    // System Tray 
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8
+    },
+
+    // Skull Menu
+    "custom/skull": {
+        "format": "󰚌",
+        "tooltip": true,
+        "on-click": "rofi -show drun",
+        "interval": 86400,
+        "tooltip-format": "O grimório do Lich se abre."
+    },
+
+    // Arcane seal of Insomnia, just for flavour. A reference to my RPG
+    "custom/seal": {
+        "format": " ⛧ INSOMNIA ⛧ ",
+        "tooltip": true,
+        "on-click": "echo -'A sombra do Imperador está a espreita.'"
+    },
+
+    // Gothic Clock
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%d %b %Y}",
+        "tooltip-format": "<big><b>{:%A, %d %B %Y}</b></big>\n<tt>{calendar}</tt>",
+        "timezone": "Brazil/East"   // change to your timezone, e.g., "America/Sao_Paulo" or "Brazil/East"
+    },
+
+    // Pulseaudio
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  MUTED",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    // Network
+    "network": {
+        "format-wifi": "󰖩 {essid}",
+        "format-ethernet": "󰈀 {ipaddr}",
+        "format-disconnected": "󰖪  Offline",
+        "tooltip-format": "{ifname}: {ipaddr} ({signalStrength}%)"
+    },
+
+    // Battery 
+    "battery": {
+        "bat": "BAT1",          
+        "interval": 30,
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "format-time": "{H}:{M}",
+        "tooltip-format": "{timeTo} ({capacity}%)"
+    },
+
+    // Power Menu
+    "custom/power": {
+        "format": " ⏻ ",
+        "on-click": "wlogout",
+        "tooltip": false
+    }
+}

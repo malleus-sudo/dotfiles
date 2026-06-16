@@ -1,0 +1,179 @@
+/*********************************************
+ * Gothic Cyberpunk waybar: Insomnia Edition *
+ *********************************************/
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "FiraCode Nerd Font", "Iosevka Nerd Font", "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #c5c8d6;
+    transition: none;
+}
+
+/* Modules in island format */
+#custom-skull,
+#custom-seal,
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#workspaces,
+#custom-power,
+#tray {
+    background: rgba(10, 10, 18, 0.82);
+    border-radius: 10px;
+    margin: 6px 5px;
+    padding: 0 12px;
+    border: 1px solid rgba(50, 50, 70, 0.6);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Neon effect when hovering */
+#custom-skull:hover,
+#custom-seal:hover,
+#clock:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#workspaces:hover,
+#custom-power:hover,
+#tray:hover {
+    background: rgba(20, 20, 35, 0.92);
+    border-color: rgba(0, 229, 255, 0.25);   /* antes #00e5ff40 */
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.2);
+}
+
+/*   Workspaces   */
+#workspaces {
+    padding: 0 8px;
+    background: rgba(10, 10, 18, 0.82);
+}
+
+#workspaces button {
+    color: #6f6f88;
+    padding: 0 6px;
+    margin: 0 2px;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    transition: 0.15s linear;
+}
+
+#workspaces button:hover {
+    color: #ff007f;
+    border-bottom-color: #ff007f;
+    background: rgba(255, 0, 127, 0.08);
+}
+
+#workspaces button.active {
+    color: #00e5ff;
+    border-bottom-color: #00e5ff;
+    text-shadow: 0 0 5px rgba(0, 229, 255, 0.5);   /* antes #00e5ff80 */
+}
+
+#workspaces button.urgent {
+    color: #ff3b6f;
+    border-bottom-color: #ff3b6f;
+    animation: pulse 0.8s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; text-shadow: 0 0 0 #ff3b6f; }
+    100% { opacity: 1; text-shadow: 0 0 6px #ff3b6f; }
+}
+
+/* Skull of the lich. Cold neon and soul */
+#custom-skull {
+    color: #00e5ff;
+    font-size: 16px;
+    padding: 0 14px;
+    border-left: 3px solid #00e5ff;
+    border-right: 3px solid #00e5ff;
+    background: linear-gradient(90deg, rgba(0,229,255,0.05), rgba(10,10,18,0.9), rgba(0,229,255,0.05));
+}
+
+/* Insomnian Seal, the Arcane manifesting */
+#custom-seal {
+    color: #ff007f;
+    font-family: "Cinzel Decorative", "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 4px #ff007f;
+    background: linear-gradient(135deg, #1a0b12, #0f0f1a);
+    border-color: rgba(255, 0, 127, 0.376);   /* antes #ff007f60 */
+}
+
+/* Gothic Clock */
+#clock {
+    font-family: "Cinzel Decorative", monospace;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ff66a5;
+    text-shadow: 0 0 6px rgba(255, 0, 127, 0.376);   /* antes #ff007f60 */
+    letter-spacing: 0.5px;
+}
+
+/* Audio, network and battery */
+#pulseaudio {
+    color: #bbbbdd;
+}
+#pulseaudio.muted {
+    color: #ff5c8a;
+}
+
+#network {
+    color: #8aaaff;
+}
+#network.disconnected {
+    color: #ff5c8a;
+}
+
+#battery {
+    color: #aad4ff;
+}
+#battery.warning {
+    color: #ffaa66;
+}
+#battery.critical {
+    color: #ff3366;
+    background: rgba(255, 51, 102, 0.2);
+    border-radius: 10px;
+}
+
+/*   System Tray   */
+#tray {
+    padding: 0 8px;
+}
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+    background: rgba(255, 0, 127, 0.188);   /* antes #ff007f30 */
+    border-radius: 8px;
+}
+
+/*    Tooltip   */
+tooltip {
+    background: rgba(11, 11, 18, 0.902);   /* antes #0b0b12e6 */
+    border: 1px solid #00e5ff;
+    border-radius: 6px;
+    color: #e0e0f0;
+    font-size: 11px;
+}
+tooltip label {
+    padding: 8px 12px;
+}
+
+/*   Splitter   */
+#custom-sep {
+    color: #2a2a3a;
+    font-size: 14px;
+    margin: 0 -4px;
+}

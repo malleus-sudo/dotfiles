@@ -4,9 +4,9 @@
 Ricing for personal use. I made the theme around my RPG with a Gothic + Cyberpunk + Arcane style. I wish to keep it a simple and functional rice, but still pretty someway. Feel free to use and adapt as you wish. 
 
 ## Tools
-OS: Archlinux
-WM: Hyprland
-IDE: vscode
+* OS: Archlinux
+* WM: Hyprland
+* IDE: vscode
 
 ## Install
 Dependencies:

@@ -1,0 +1,123 @@
+/**************************
+ * Rofi – Insomnian Theme *
+ **************************/
+
+* {
+    /* Global configs and font */
+    font: "FiraCode Nerd Font 12";
+    
+    /* Color Pallete: Arcane-Tech & Necromancy */
+    bg-void:       rgba(5, 5, 8, 0.95);    /* System background */
+    bg-corp:       rgba(15, 15, 20, 0.90); /* Internal panels background */
+    border-corp:   #1a1a24;                /* Metalic borders */
+    neon-cyan:     #00ffff;                /* Necromancy */
+    magic-magenta: #b300ff;                /* Arcane */
+    text-dim:      #4a4a4a;                /* Inactive text */
+    text-bright:   #c0c0c0;                /* Active text */
+    
+    background-color: transparent;
+    text-color: @text-bright;
+}
+
+window {
+    background-color: @bg-void;
+    border: 2px;
+    border-color: @border-corp;
+    border-radius: 0px; 
+    padding: 20px;
+    width: 600px;
+}
+
+mainbox {
+    spacing: 15px;
+}
+
+inputbar {
+    background-color: @bg-corp;
+    padding: 12px;
+    border: 1px;
+    border-color: @neon-cyan;
+    border-radius: 0px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @neon-cyan;
+    padding: 0px 12px 0px 0px;
+    font: "FiraCode Nerd Font Bold 12";
+}
+
+entry {
+    text-color: @neon-cyan;
+    placeholder: "Consultar registros...";
+    placeholder-color: @text-dim;
+}
+
+listview {
+    margin: 10px 0px 0px 0px;
+    lines: 8;
+    spacing: 4px;
+    scrollbar: false;
+    border: 0px;
+}
+
+element {
+    padding: 8px 12px;
+    border: 1px;
+    border-color: transparent;
+    border-radius: 0px;
+}
+
+/* Inactive items */
+element normal.normal, element alternate.normal {
+    background-color: transparent;
+    text-color: @text-bright;
+}
+
+/* The Arcane field reacting to user's interaction */
+element selected.normal {
+    background-color: rgba(179, 0, 255, 0.1); /* Fundo sutilmente mágico */
+    border: 1px;
+    border-color: @magic-magenta; /* O selo brilhando nas bordas */
+    text-color: #ffffff;
+}
+
+element-icon {
+    size: 24px;
+    margin: 0px 12px 0px 0px;
+    text-color: inherit;
+    cursor: pointer;
+}
+
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+    cursor: pointer;
+}
+
+/* Navigation tabs (drun, run, window) */
+mode-switcher {
+    spacing: 10px;
+}
+
+button {
+    padding: 8px;
+    background-color: @bg-corp;
+    text-color: @text-dim;
+    border: 1px;
+    border-color: @border-corp;
+    border-radius: 0px;
+}
+
+button selected {
+    background-color: rgba(0, 255, 255, 0.1);
+    text-color: @neon-cyan;
+    border-color: @neon-cyan;
+}
+
+message {
+    background-color: @bg-corp;
+    border: 1px;
+    border-color: @magic-magenta;
+    padding: 10px;
+}

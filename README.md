@@ -27,5 +27,5 @@ After installing the dependencies, clone the repo and copy the dotfiles you wish
 - [x] Waybar
 - [x] Rofi
 - [ ] Wallpaper
-- [ ] Wlogout
+- [x] Wlogout
 - [ ] Kitty

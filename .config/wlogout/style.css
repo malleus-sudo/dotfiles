@@ -1,0 +1,32 @@
+* {
+    background-image: none;
+    font-family: "FiraCode Nerd Font", "Cinzel Decorative", monospace;
+    transition: all 0.2s ease-in-out;
+}
+
+window {
+    background-color: rgba(5, 5, 8, 0.95);
+}
+
+button {
+    color: #c0c0c0;
+    background-color: rgba(15, 15, 20, 0.90);
+    border: 2px solid #1a1a24;
+    border-radius: 0px; 
+    margin: 10px;
+    padding: 20px;
+    font-size: 80px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
+}
+button:hover, button:focus {
+    background-color: rgba(179, 0, 255, 0.1);
+    border: 2px solid #b300ff;
+    color: #00ffff;
+    box-shadow: 0 0 15px rgba(179, 0, 255, 0.4), inset 0 0 10px rgba(0, 229, 255, 0.1);
+    outline: none;
+}
+button:active {
+    background-color: rgba(255, 0, 127, 0.2);
+    border-color: #ff007f;
+    color: #ff007f;
+}
